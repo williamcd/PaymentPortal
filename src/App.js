@@ -9,6 +9,7 @@ import Affiliates from './components/Affiliates';
 import Education from './components/Education';
 import History from './components/History';
 import MyAccount from './components/MyAccount';
+import Reset from './components/Reset';
 
 
 function App() {
@@ -19,12 +20,13 @@ function App() {
           <Nav />
           <div>
             <Switch>
-              <Route exact path="/" component={Login} />
+              <Route exact path="/login" component={Login} />
               <Route exact path="/home" component={Home} />
               <Route exact path="/education" component={Education} />
               <Route exact path="/affiliates" component={Affiliates} />
               <Route exact path="/history" component={History} />
               <Route exact path="/myaccount" component={MyAccount} />
+              <Route exact path="/reset" component={Reset} />
             </Switch>
           </div>
         </Router>

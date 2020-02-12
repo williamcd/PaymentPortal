@@ -10,19 +10,27 @@ class Nav extends Component {
     hamburger = () => {
         this.setState({ hamburger: !this.state.hamburger })
     }
+    componentDidMount() {
+        console.log(window.location.pathname);
+    }
+    login = () => {
+        this.setState({ loggedIn: true })
+    }
     render() {
         return (
             <NavStyle>
                 <Title>Title!</Title>
+                {this.state.loggedIn ? 
                 <Buttons>
                     <Link to="/home"><Button1>Home</Button1></Link>
                     <Link to="/education"><Button1>Education</Button1></Link>
                     <Link to="/affiliates"><Button1>Affiliates</Button1></Link>
                     <Link to="/history"><Button1>History</Button1></Link>
                     <Link to="/myaccount"><Button1>My Account</Button1></Link>
-                    <Link to="/"><Button1>Log Out</Button1></Link>
+                    <Link to="/login"><Button1>Log Out</Button1></Link>
                     <div></div>
-                </Buttons>
+                </Buttons> 
+                : <WelcomeMessage>Login to get started</WelcomeMessage>}
             </NavStyle>
         );
     }
@@ -30,10 +38,13 @@ class Nav extends Component {
 const NavStyle = styled.div`
     height: 100vh;
     width: 200px;
-    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-content: center; */
+    border-right: 1px solid black;
+`
+const WelcomeMessage = styled.div`
+    margin-top: 30px;
 `
 const Title = styled.div`
     margin-top: 30px;
@@ -42,6 +53,7 @@ const Title = styled.div`
     margin-left: 15px;
 `
 const Buttons = styled.div`
+    margin-left: 30px;
     margin-top: 30px;
     /* background-color: #cdcdcd; */
     display: flex;
@@ -52,6 +64,7 @@ const Button1 = styled.button`
     /* colors */
     color: black;
     font-size: 12px;
+    background: none;
     /* border */
     border: none;
     outline: none;
