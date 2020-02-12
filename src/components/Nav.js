@@ -19,7 +19,7 @@ class Nav extends Component {
     render() {
         return (
             <NavStyle>
-                <Title>Title!</Title>
+                <Title>some witty title</Title>
                 {this.state.loggedIn ? 
                 <Buttons>
                     <Link to="/home"><Button1>Home</Button1></Link>
@@ -49,7 +49,7 @@ const WelcomeMessage = styled.div`
 `
 const Title = styled.div`
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     margin-left: 30px;
     color: white;
@@ -70,7 +70,7 @@ const Button1 = styled.button`
     /* border */
     border: none;
     outline: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
     /* animations */
     &:hover {
         color: tomato;
