@@ -14,22 +14,28 @@ import MyAccount from './components/MyAccount';
 function App() {
   return (
     <div>
-      <Router>
-        <Nav />
-        <div>
-          <Switch>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/education" component={Education} />
-            <Route exact path="/affiliates" component={Affiliates} />
-            <Route exact path="/history" component={History} />
-            <Route exact path="/myaccount" component={MyAccount} />
-          </Switch>
-        </div>
-        <Footer />
-      </Router>
+      <BodyAlignment>
+        <Router>
+          <Nav />
+          <div>
+            <Switch>
+              <Route exact path="/" component={Login} />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/education" component={Education} />
+              <Route exact path="/affiliates" component={Affiliates} />
+              <Route exact path="/history" component={History} />
+              <Route exact path="/myaccount" component={MyAccount} />
+            </Switch>
+          </div>
+        </Router>
+      </BodyAlignment>
+      <Footer />
     </div>
   );
 }
-
+const BodyAlignment = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+`
 export default App;
