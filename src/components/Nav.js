@@ -40,8 +40,9 @@ const NavStyle = styled.div`
     width: 200px;
     display: flex;
     flex-direction: column;
+    background-color: rgba(37, 14, 57, 0.9);
     /* align-content: center; */
-    border-right: 1px solid black;
+    /* border-right: 1px solid black; */
 `
 const WelcomeMessage = styled.div`
     margin-top: 30px;
@@ -50,7 +51,8 @@ const Title = styled.div`
     margin-top: 30px;
     font-size: 40px;
     font-weight: 500;
-    margin-left: 15px;
+    margin-left: 30px;
+    color: white;
 `
 const Buttons = styled.div`
     margin-left: 30px;
@@ -62,19 +64,21 @@ const Buttons = styled.div`
 const Button1 = styled.button`
     height: 60px;
     /* colors */
-    color: black;
-    font-size: 12px;
+    color: white;
+    font-size: 16px;
     background: none;
     /* border */
     border: none;
     outline: none;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
     /* animations */
     &:hover {
         color: tomato;
+        border-bottom: 1px solid tomato;
     }
     &:active {
         color: red;
+        border-bottom: 1px solid red;
     }
 `
 

@@ -3,12 +3,25 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
 class Login extends Component {
+    state = {
+        // obviously don't actually do this
+        email: "",
+        password: "",
+    }
+    handleChange = (event) => {
+        const { name, value } = event.target
+        this.setState({
+            [name]: value
+        })
+        console.log(this.state.email)
+    };
+
     render() {
         return (
             <AlignmentDiv>
                 <Inputs>
-                    <Input1 placeholder="Email..." />
-                    <Input1 placeholder="Password..." />
+                    <Input1 placeholder="Email..." type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
+                    <Input1 placeholder="Password..." type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
                 </Inputs>
                 <Link to="/home"><Button1>Login</Button1></Link>
                 <Link to="/reset"><Forgot>Forgot password?</Forgot></Link>
@@ -16,6 +29,7 @@ class Login extends Component {
         );
     }
 }
+
 const AlignmentDiv = styled.div`
     height: 80vh;
     width: calc(100vw - 200px);
@@ -33,14 +47,16 @@ const Button1 = styled.button`
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #1C7293;
+    background-color: #ea214b;
     color: #FDFDFF;
-    border: none;
+    border: 2px solid #ea214b;
     font-size: 15px;
     font-weight: bold;
     outline: none;
+    transition: 0.2s ease;
     &:hover {
-        color: #C6C5B9;
+        color: #ea214b;
+        background-color: #FDFDFF;
     };
     &:active {
         background-color: #065A82;
