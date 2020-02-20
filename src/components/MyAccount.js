@@ -39,27 +39,29 @@ const UserData = styled.div`
     flex-direction: column;
 `
 const InputDiv = styled.div`
-    width: 70%;
+    width: 50%;
     input {
         height: 30px;
-        width: 400px;
+        width: 100%;
+        padding-left: 10px;
     }
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 `
 const Data = styled.div`
-    width: 30%;
+    width: 20%;
     /* border-right: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 `
 const DataDiv = styled.div`
-    width: 60%;
+    width: 70%;
     border: 1px solid grey;
     padding-left: 30px;
     border-radius: 5px;
+    margin-top: 20px;
     margin-left: 5%;
     margin-right: 5%;
     height: 100%;
