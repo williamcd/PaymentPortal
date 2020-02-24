@@ -51,9 +51,9 @@ class Education extends Component {
     render() {
         return (
             <Main>
-                <div>
+                <h1>
                     Education
-                </div>
+                </h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, mi in rutrum venenatis, elit lorem pulvinar metus, et eleifend eros mauris nec nisi. Praesent ornare dolor ac lacus cursus varius. Sed rhoncus id justo vitae ornare. Sed dignissim maximus dui, lacinia eleifend metus sollicitudin vel. Donec sed dui eget dui dapibus pharetra ut vitae tellus. Etiam ut nisl lacus. Suspendisse elit diam, lobortis vel euismod non, ornare a magna.
 
@@ -65,25 +65,25 @@ class Education extends Component {
                     <div>Title Three</div>
                 </ImageTitles>
                 <Images>
-                    <Image></Image>
-                    <Image></Image>
-                    <Image></Image>
+                    <Image alt="img1 goes here"></Image>
+                    <Image alt="img2 goes here"></Image>
+                    <Image alt="img3 goes here"></Image>
                 </Images>
                 <DropDowns>
                     <DropDown onClick={() => { this.toggleQuestion(1) }}>
-                        {this.state.question1 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                        {this.state.question1 ? <div>Here's the answer to question 1 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(2) }}>
-                        {this.state.question2 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                        {this.state.question2 ? <div>Here's the answer to question 2 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(3) }}>
-                        {this.state.question3 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                        {this.state.question3 ? <div>Here's the answer to question 3 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(4) }}>
-                        {this.state.question4 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                        {this.state.question4 ? <div>Here's the answer to question 4 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(5) }}>
-                        {this.state.question5 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                        {this.state.question5 ? <div>Here's the answer to question 5 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                 </DropDowns>
                 <p>
@@ -104,6 +104,7 @@ class Education extends Component {
 const Main = styled.div`
     width: calc(100vw - 200px);
     height: 100vh;
+    margin-top: 30px;
 
     display: flex;
     flex-direction: column;
@@ -111,15 +112,13 @@ const Main = styled.div`
     overflow: scroll;
 
     background: yellow;
-    padding-left: 30px;
-    padding-right: 30px;
-    div {
-        font-size: 30px;
+    h1 {
+        font-size: 50px;
         font-weight: 700;
         align-self: center;
     }
     p {
-        font-size: 20px;
+        font-size: 22px;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -146,7 +145,8 @@ const ImageTitles = styled.div`
         align-items: center;
         width: 270px;
         height: 40px;
-        font-size: 20px;
+        font-size: 28px;
+        font-weight: 550;
     }
 `
 const DropDowns = styled.div`
@@ -163,6 +163,8 @@ const DropDown = styled.button`
     min-height: 40px;
     max-height: 280px;
     margin-top: 10px;
+    font-size: 26px;
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
