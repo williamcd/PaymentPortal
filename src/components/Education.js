@@ -2,6 +2,52 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 class Education extends Component {
+    // THIS IS DISGUSTING, JUST GETTING IT DONE
+    state = {
+        question1: false,
+        question2: false,
+        question3: false,
+        question4: false,
+        question5: false,
+    }
+    toggleQuestion = (num) => {
+        if (num == 1) {
+            this.setState({ question1: true })
+            this.setState({ question2: false })
+            this.setState({ question3: false })
+            this.setState({ question4: false })
+            this.setState({ question5: false })
+            console.log(1)
+        } else if (num == 2) {
+            this.setState({ question1: false })
+            this.setState({ question2: true })
+            this.setState({ question3: false })
+            this.setState({ question4: false })
+            this.setState({ question5: false })
+            console.log(2)
+        } else if (num == 3) {
+            this.setState({ question1: false })
+            this.setState({ question2: false })
+            this.setState({ question3: true })
+            this.setState({ question4: false })
+            this.setState({ question5: false })
+            console.log(3)
+        } else if (num == 4) {
+            this.setState({ question1: false })
+            this.setState({ question2: false })
+            this.setState({ question3: false })
+            this.setState({ question4: true })
+            this.setState({ question5: false })
+            console.log(4)
+        } else if (num == 5) {
+            this.setState({ question1: false })
+            this.setState({ question2: false })
+            this.setState({ question3: false })
+            this.setState({ question4: false })
+            this.setState({ question5: true })
+            console.log(5)
+        }
+    }
     render() {
         return (
             <Main>
@@ -10,29 +56,45 @@ class Education extends Component {
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, mi in rutrum venenatis, elit lorem pulvinar metus, et eleifend eros mauris nec nisi. Praesent ornare dolor ac lacus cursus varius. Sed rhoncus id justo vitae ornare. Sed dignissim maximus dui, lacinia eleifend metus sollicitudin vel. Donec sed dui eget dui dapibus pharetra ut vitae tellus. Etiam ut nisl lacus. Suspendisse elit diam, lobortis vel euismod non, ornare a magna.
-    
+
     Etiam blandit ornare felis. Fusce sagittis, risus vitae auctor tempus, lectus velit feugiat odio, vel facilisis mi augue et nulla. Nulla vitae placerat nisl, eu maximus augue. Aliquam faucibus tellus quis lorem lobortis, vel molestie libero hendrerit. Aenean enim elit, varius a luctus in, facilisis eu ligula. Phasellus nec cursus purus. Fusce fermentum est sit amet vulputate efficitur.
                 </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, mi in rutrum venenatis, elit lorem pulvinar metus, et eleifend eros mauris nec nisi. Praesent ornare dolor ac lacus cursus varius. Sed rhoncus id justo vitae ornare. Sed dignissim maximus dui, lacinia eleifend metus sollicitudin vel. Donec sed dui eget dui dapibus pharetra ut vitae tellus. Etiam ut nisl lacus. Suspendisse elit diam, lobortis vel euismod non, ornare a magna.
-    
-    Etiam blandit ornare felis. Fusce sagittis, risus vitae auctor tempus, lectus velit feugiat odio, vel facilisis mi augue et nulla. Nulla vitae placerat nisl, eu maximus augue. Aliquam faucibus tellus quis lorem lobortis, vel molestie libero hendrerit. Aenean enim elit, varius a luctus in, facilisis eu ligula. Phasellus nec cursus purus. Fusce fermentum est sit amet vulputate efficitur.
-                </p>
-                <div>Payment Methods</div>
+                <ImageTitles>
+                    <div>Title One</div>
+                    <div>Title Two</div>
+                    <div>Title Three</div>
+                </ImageTitles>
                 <Images>
                     <Image></Image>
                     <Image></Image>
                     <Image></Image>
                 </Images>
+                <DropDowns>
+                    <DropDown onClick={() => { this.toggleQuestion(1) }}>
+                        {this.state.question1 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                    </DropDown>
+                    <DropDown onClick={() => { this.toggleQuestion(2) }}>
+                        {this.state.question2 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                    </DropDown>
+                    <DropDown onClick={() => { this.toggleQuestion(3) }}>
+                        {this.state.question3 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                    </DropDown>
+                    <DropDown onClick={() => { this.toggleQuestion(4) }}>
+                        {this.state.question4 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                    </DropDown>
+                    <DropDown onClick={() => { this.toggleQuestion(5) }}>
+                        {this.state.question5 ? <div>Here's the answer to the question the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question</div>}
+                    </DropDown>
+                </DropDowns>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, mi in rutrum venenatis, elit lorem pulvinar metus, et eleifend eros mauris nec nisi. Praesent ornare dolor ac lacus cursus varius. Sed rhoncus id justo vitae ornare. Sed dignissim maximus dui, lacinia eleifend metus sollicitudin vel. Donec sed dui eget dui dapibus pharetra ut vitae tellus. Etiam ut nisl lacus. Suspendisse elit diam, lobortis vel euismod non, ornare a magna.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, mi in rutrum venenatis, elit lorem pulvinar metus, et eleifend eros mauris nec nisi. Praesent ornare dolor ac lacus cursus varius. Sed rhoncus id justo vitae ornare. Sed dignissim maximus dui, lacinia eleifend metus sollicitudin vel. Donec sed dui eget dui dapibus pharetra ut vitae tellus. Etiam ut nisl lacus. Suspendisse elit diam, lobortis vel euismod non, ornare a magna.
 
-Etiam blandit ornare felis. Fusce sagittis, risus vitae auctor tempus, lectus velit feugiat odio, vel facilisis mi augue et nulla. Nulla vitae placerat nisl, eu maximus augue. Aliquam faucibus tellus quis lorem lobortis, vel molestie libero hendrerit. Aenean enim elit, varius a luctus in, facilisis eu ligula. Phasellus nec cursus purus. Fusce fermentum est sit amet vulputate efficitur.
+    Etiam blandit ornare felis. Fusce sagittis, risus vitae auctor tempus, lectus velit feugiat odio, vel facilisis mi augue et nulla. Nulla vitae placerat nisl, eu maximus augue. Aliquam faucibus tellus quis lorem lobortis, vel molestie libero hendrerit. Aenean enim elit, varius a luctus in, facilisis eu ligula. Phasellus nec cursus purus. Fusce fermentum est sit amet vulputate efficitur.
                 </p>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, mi in rutrum venenatis, elit lorem pulvinar metus, et eleifend eros mauris nec nisi. Praesent ornare dolor ac lacus cursus varius. Sed rhoncus id justo vitae ornare. Sed dignissim maximus dui, lacinia eleifend metus sollicitudin vel. Donec sed dui eget dui dapibus pharetra ut vitae tellus. Etiam ut nisl lacus. Suspendisse elit diam, lobortis vel euismod non, ornare a magna.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium, mi in rutrum venenatis, elit lorem pulvinar metus, et eleifend eros mauris nec nisi. Praesent ornare dolor ac lacus cursus varius. Sed rhoncus id justo vitae ornare. Sed dignissim maximus dui, lacinia eleifend metus sollicitudin vel. Donec sed dui eget dui dapibus pharetra ut vitae tellus. Etiam ut nisl lacus. Suspendisse elit diam, lobortis vel euismod non, ornare a magna.
 
-Etiam blandit ornare felis. Fusce sagittis, risus vitae auctor tempus, lectus velit feugiat odio, vel facilisis mi augue et nulla. Nulla vitae placerat nisl, eu maximus augue. Aliquam faucibus tellus quis lorem lobortis, vel molestie libero hendrerit. Aenean enim elit, varius a luctus in, facilisis eu ligula. Phasellus nec cursus purus. Fusce fermentum est sit amet vulputate efficitur.
+    Etiam blandit ornare felis. Fusce sagittis, risus vitae auctor tempus, lectus velit feugiat odio, vel facilisis mi augue et nulla. Nulla vitae placerat nisl, eu maximus augue. Aliquam faucibus tellus quis lorem lobortis, vel molestie libero hendrerit. Aenean enim elit, varius a luctus in, facilisis eu ligula. Phasellus nec cursus purus. Fusce fermentum est sit amet vulputate efficitur.
                 </p>
             </Main>
         );
@@ -49,8 +111,8 @@ const Main = styled.div`
     overflow: scroll;
 
     background: yellow;
-    margin-left: 25px;
-    margin-right: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
     div {
         font-size: 30px;
         font-weight: 700;
@@ -58,6 +120,8 @@ const Main = styled.div`
     }
     p {
         font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 `
 const Images = styled.div`
@@ -67,9 +131,43 @@ const Images = styled.div`
     justify-content: space-around;
 `
 const Image = styled.img`
-    width: 270px;
-    height: 300px;
+    width: 370px;
+    height: 460px;
     background-color: red;
+`
+const ImageTitles = styled.div`
+    width: calc(100vw - 200px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 40px;
+        font-size: 20px;
+    }
+`
+const DropDowns = styled.div`
+    width: calc(100vw - 200px);
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+`
+const DropDown = styled.button`
+    width: calc(90vw - 200px);
+    min-height: 40px;
+    max-height: 280px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: green;
 `
 
 export default Education;
