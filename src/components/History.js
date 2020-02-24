@@ -5,7 +5,7 @@ class History extends Component {
     render() {
         return (
             <Graph>
-                history
+                
             </Graph>
         );
     }

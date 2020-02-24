@@ -58,6 +58,7 @@ const Data = styled.div`
 `
 const DataDiv = styled.div`
     width: 70%;
+    max-width: 600px;
     border: 1px solid grey;
     padding-left: 30px;
     border-radius: 5px;
