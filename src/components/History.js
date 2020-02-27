@@ -17,6 +17,11 @@ class History extends Component {
                     <HistoryCard />
                     <HistoryCard />
                     <HistoryCard />
+                    <HistoryCard />
+                    <HistoryCard />
+                    <HistoryCard />
+                    <HistoryCard />
+                    <HistoryCard />
                 </Graph>
                 <TotalRemaining>
                     <div>total paid</div>
