@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 class Education extends Component {
-    // THIS IS DISGUSTING, JUST GETTING IT DONE
+    // THIS IS DISGUSTING, JUST GETTING IT DONE LOL
     state = {
         question1: false,
         question2: false,

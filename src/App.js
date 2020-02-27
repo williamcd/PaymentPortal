@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Affiliates from './components/Affiliates';
 import Education from './components/Education';
-import History from './components/History';
+import History from './components/History/History';
 import MyAccount from './components/MyAccount';
 import Reset from './components/Reset';
 import Payments from './components/Payments';

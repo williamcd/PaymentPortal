@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 class HistoryCard extends Component {
+    componentDidMount() {
+        console.log(this.props)
+    }
     render() {
         return (
             <Card>
-                <div className="date">due date</div>
-                <div className="reason">info</div>
-                <div className="status">status</div>
-                <div className="cost">discount</div>
-                <div className="total">total</div>
+                <div className="date">{this.props.data.dueDate}</div>
+                <div className="reason">{this.props.data.info}</div>
+                <div className="status">{this.props.data.status ? <p>paid</p> : <p>unpaid</p>}</div>
+                <div className="cost">{this.props.data.discount}</div>
+                <div className="total">Total due: ${this.props.data.total}</div>
                 <div className="buttons">
                     <button className="info">More...</button>
                     <button className="paynow">Pay now</button>
