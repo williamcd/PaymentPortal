@@ -24,6 +24,10 @@ class MyAccount extends Component {
                         <input></input>
                     </InputDiv>
                 </DataDiv>
+                <div className="buttons">
+                    <button>Save</button>
+                    <button>Cancel</button>
+                </div>
             </UserData>
         );
     }
@@ -37,6 +41,37 @@ const UserData = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 300px;
+        button {
+            width: 100px;
+            height: 40px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #ea214b;
+            color: #FDFDFF;
+            border: 2px solid #ea214b;
+            font-size: 15px;
+            font-weight: bold;
+            outline: none;
+            transition: 0.2s ease;
+            &:hover {
+                color: #ea214b;
+                background-color: #FDFDFF;
+            };
+            &:active {
+                width: 95px;
+                height: 38px;
+                margin-top: 11px;
+                margin-right: 5px;
+            }
+        }
+    }
 `
 const InputDiv = styled.div`
     width: 50%;
