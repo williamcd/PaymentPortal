@@ -67,7 +67,7 @@ const Card = styled.div`
     .info {
         height: 35px;
         width: 100px;
-        font-size: 25px;
+        font-size: 20px;
         border: 1px solid black;
         border-radius: 5px;
         background-color: rgba(37, 14, 57, 0.9);
@@ -81,7 +81,7 @@ const Card = styled.div`
         height: 35px;
         width: 100px;
         margin-left: 10px;
-        font-size: 25px;
+        font-size: 20px;
         border: 1px solid black;
         border-radius: 5px;
         background-color: rgba(37, 14, 57, 0.9);
