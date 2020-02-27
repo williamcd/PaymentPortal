@@ -155,27 +155,26 @@ const DropDowns = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    transition: transform 1s;
     padding-bottom: 10px;
 `
-const DropDown = styled.button`
+const DropDown = styled.div`
     width: calc(90vw - 200px);
     min-height: 40px;
-    /* max-height: 280px; */
     margin-top: 10px;
     font-size: 26px;
     font-weight: 500;
     display: flex;
+    align-content: center;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-    transition-duration: 0.4s;
     text-decoration: none;
     border: 1px solid black;
     outline: none;
-    :active {
-        border: 1px solid black;
-        outline: none;
-    }
+    background-color: rgba(37, 14, 57, 0.9);
+    color: white;
+    border-radius: 5px;
     .open {
         height: 300px;
     }
