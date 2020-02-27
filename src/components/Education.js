@@ -71,19 +71,19 @@ class Education extends Component {
                 </Images>
                 <DropDowns>
                     <DropDown onClick={() => { this.toggleQuestion(1) }}>
-                        {this.state.question1 ? <div>Here's the answer to question 1 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
+                        {this.state.question1 ? <div className="open">Here's the answer to question 1 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(2) }}>
-                        {this.state.question2 ? <div>Here's the answer to question 2 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
+                        {this.state.question2 ? <div className="open">Here's the answer to question 2 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(3) }}>
-                        {this.state.question3 ? <div>Here's the answer to question 3 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
+                        {this.state.question3 ? <div className="open">Here's the answer to question 3 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div className="closed">Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(4) }}>
-                        {this.state.question4 ? <div>Here's the answer to question 4 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
+                        {this.state.question4 ? <div className="open">Here's the answer to question 4 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(5) }}>
-                        {this.state.question5 ? <div>Here's the answer to question 5 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
+                        {this.state.question5 ? <div className="open">Here's the answer to question 5 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                 </DropDowns>
                 <p>
@@ -104,14 +104,11 @@ class Education extends Component {
 const Main = styled.div`
     width: calc(100vw - 200px);
     height: 100vh;
-    margin-top: 30px;
 
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     overflow: scroll;
-
-    background: yellow;
     h1 {
         font-size: 50px;
         font-weight: 700;
@@ -132,7 +129,10 @@ const Images = styled.div`
 const Image = styled.img`
     width: 370px;
     height: 460px;
-    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
 `
 const ImageTitles = styled.div`
     width: calc(100vw - 200px);
@@ -153,7 +153,6 @@ const DropDowns = styled.div`
     width: calc(100vw - 200px);
     display: flex;
     flex-direction: column;
-    background-color: blue;
     align-items: center;
     margin-top: 30px;
     padding-bottom: 10px;
@@ -161,7 +160,7 @@ const DropDowns = styled.div`
 const DropDown = styled.button`
     width: calc(90vw - 200px);
     min-height: 40px;
-    max-height: 280px;
+    /* max-height: 280px; */
     margin-top: 10px;
     font-size: 26px;
     font-weight: 500;
@@ -169,7 +168,17 @@ const DropDown = styled.button`
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: green;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    border: 1px solid black;
+    outline: none;
+    :active {
+        border: 1px solid black;
+        outline: none;
+    }
+    .open {
+        height: 300px;
+    }
 `
 
 export default Education;
