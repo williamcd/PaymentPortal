@@ -77,7 +77,7 @@ class Education extends Component {
                         {this.state.question2 ? <div className="open">Here's the answer to question 2 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(3) }}>
-                        {this.state.question3 ? <div className="open">Here's the answer to question 3 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div className="closed">Here's the question (click me)</div>}
+                        {this.state.question3 ? <div className="open">Here's the answer to question 3 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
                     </DropDown>
                     <DropDown onClick={() => { this.toggleQuestion(4) }}>
                         {this.state.question4 ? <div className="open">Here's the answer to question 4 the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dogit's a big paragraph the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog</div> : <div>Here's the question (click me)</div>}
@@ -115,9 +115,15 @@ const Main = styled.div`
         align-self: center;
     }
     p {
-        font-size: 22px;
+        align-self: center;
+        font-size: 20px;
+        font-weight: 400;
+        text-indent: 40px;
         padding-left: 20px;
         padding-right: 20px;
+        line-height: 1.5;
+        width: 700px;
+        /* text-align: center; */
     }
 `
 const Images = styled.div`
@@ -155,7 +161,7 @@ const DropDowns = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    transition: transform 1s;
+    transition: height 1s;
     padding-bottom: 10px;
 `
 const DropDown = styled.div`
@@ -167,6 +173,7 @@ const DropDown = styled.div`
     display: flex;
     align-content: center;
     justify-content: space-between;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: none;
@@ -175,6 +182,7 @@ const DropDown = styled.div`
     background-color: rgba(37, 14, 57, 0.9);
     color: white;
     border-radius: 5px;
+    transition: height 2s;
     .open {
         height: 300px;
     }
