@@ -22,7 +22,7 @@ class Nav extends Component {
                 <Title>some witty title</Title>
                 {this.state.loggedIn ? 
                 <Buttons>
-                    <Link to="/home"><Button1>Home</Button1></Link>
+                    <Link to="/"><Button1>Home</Button1></Link>
                     <Link to="/education"><Button1>Education</Button1></Link>
                     <Link to="/affiliates"><Button1>Affiliates</Button1></Link>
                     <Link to="/history"><Button1>History</Button1></Link>

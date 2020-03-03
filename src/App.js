@@ -11,6 +11,7 @@ import History from './components/History/History';
 import MyAccount from './components/MyAccount';
 import Reset from './components/Reset';
 import Payments from './components/Payments';
+import ResetSuccess from './components/ResetSuccess';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
               <Route exact path="/myaccount" component={MyAccount} />
               <Route exact path="/reset" component={Reset} />
               <Route exact path="/payments" component={Payments} />
+              <Route exact path="/resetSuccess" component={ResetSuccess} />
             </Switch>
           </div>
         </Router>

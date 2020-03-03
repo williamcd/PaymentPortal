@@ -23,7 +23,7 @@ class Login extends Component {
                     <Input1 placeholder="Email..." type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
                     <Input1 placeholder="Password..." type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
                 </Inputs>
-                <Link to="/home"><Button1>Login</Button1></Link>
+                <Link to="/"><Button1>Login</Button1></Link>
                 <Link to="/reset"><Forgot>Forgot password?</Forgot></Link>
             </AlignmentDiv>
         );
@@ -69,9 +69,15 @@ const Title = styled.div`
 const Inputs = styled.div`
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    height: 200px;
 `
 const Input1 = styled.input`
-    border-bottom: 1px solid black;
     border-top: none;
     border-left: none;
     border-right: none;
