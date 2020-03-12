@@ -43,7 +43,7 @@ const BodyAlignment = styled.div`
   display: flex;
   flex-direction: row;
   width: 100vw;
-  background-color: #F2F2F2;
+  background-color: #FFF;
   font-family: Arial;
 `
 export default App;
